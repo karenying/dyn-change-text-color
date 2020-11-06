@@ -1,5 +1,5 @@
 import './App.css';
-import ColorBox from './ColorBox';
+import ColorBox from './components/ColorBox/ColorBox';
 
 function App() {
   return (
