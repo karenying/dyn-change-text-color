@@ -1,0 +1,10 @@
+.colorbox-container {
+  height: 70px;
+  width: 200px;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
