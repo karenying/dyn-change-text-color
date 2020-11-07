@@ -12,7 +12,7 @@ const ColorBox = ({ backgroundHex }) => {
     >
       {`#${backgroundHex}`}
       <br />
-      {`Constrast ratio: ${backgroundColor
+      {`Contrast ratio: ${backgroundColor
         .contrastRatioWith(textColor)
         .toFixed(2)}`}
     </div>

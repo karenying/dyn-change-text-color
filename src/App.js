@@ -4,7 +4,7 @@ import ColorBox from './components/ColorBox/ColorBox';
 function App() {
   return (
     <div className='App'>
-      <ColorBox backgroundHex='ffc300' />
+      <ColorBox backgroundHex='2a2b2e' />
     </div>
   );
 }
