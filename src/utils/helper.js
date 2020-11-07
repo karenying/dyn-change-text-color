@@ -28,23 +28,16 @@ function hexToRGB(hex) {
 
 // calculates relative luminance given a hex string
 export function getLuminance(hex) {
-  const { r, g, b } = hexToRGB(hex);
-  const rgb = [r, g, b];
+  const rgb = hexToRGB(hex);
 
-  for (let i = 0; i < rgb.length; i++) {
-    let c = rgb[i];
+  for (const key in rgb) {
+    let c = rgb[key];
     c /= 255;
 
-    if (c > 0.03928) {
-      c = Math.pow((c + 0.055) / 1.055, 2.4);
-    } else {
-      c /= 12.92;
-    }
+    c = c > 0.03928 ? Math.pow((c + 0.055) / 1.055, 2.4) : (c /= 12.92);
 
-    rgb[i] = c;
+    rgb[key] = c;
   }
 
-  return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2];
+  return 0.2126 * rgb.r + 0.7152 * rgb.g + 0.0722 * rgb.b;
 }
-
-console.log(contrastRatioPair('000000', '000000'));
